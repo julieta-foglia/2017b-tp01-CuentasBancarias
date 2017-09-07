@@ -9,4 +9,8 @@ public class Cuenta {
 		this.saldo = saldo;
 	}
 
+	public double obtenerSaldo() {
+		return this.saldo;
+	}
+
 }
