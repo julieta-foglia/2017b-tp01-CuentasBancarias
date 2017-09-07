@@ -10,7 +10,7 @@ public class CuentasBancariasTests {
 
 	@Test
 	public void test() {
-		Cuenta cuentaOrigen = new Cuenta();
+		Cuenta cuentaOrigen = new Cuenta(1, 0);
 	}
 
 }
