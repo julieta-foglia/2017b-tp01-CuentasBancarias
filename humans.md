@@ -7,5 +7,5 @@
 
 ## Estudiantes
 
-* XXX ([xxx](https://github.com/xxx))
-* XXX ([xxx](https://github.com/xxx))
+* Julieta Foglia ([julieta-foglia](https://github.com/julieta-foglia))
+* Marcos Cabrera Torrico ([MarcosCabreraTorrico](https://github.com/MarcosCabreraTorrico))
