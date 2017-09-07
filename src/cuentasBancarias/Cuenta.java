@@ -13,4 +13,8 @@ public class Cuenta {
 		return this.saldo;
 	}
 
+	public void transferirMontoHacia(double monto, Cuenta cuenta) {
+		
+	}
+
 }

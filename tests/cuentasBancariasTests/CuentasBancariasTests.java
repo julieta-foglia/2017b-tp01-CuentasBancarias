@@ -19,5 +19,13 @@ public class CuentasBancariasTests {
 		Cuenta cuentaOrigen = new Cuenta(1, 0);
 		Assert.assertEquals(0, cuentaOrigen.obtenerSaldo(), 0.001);
 	}
+	
+	@Test
+	public void queSeTransfieraSaldoEntreCuentas() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(5, cuentaDestino);
+		Assert.assertEquals(10, cuentaDestino.obtenerSaldo(), 0.001);
+	}
 
 }
