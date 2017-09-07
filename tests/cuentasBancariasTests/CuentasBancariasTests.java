@@ -17,7 +17,7 @@ public class CuentasBancariasTests {
 	@Test
 	public void queSeObtengaSaldoDeLaCuenta() {
 		Cuenta cuentaOrigen = new Cuenta(1, 0);
-		Assert.assertEquals(5, cuentaOrigen.obtenerSaldo(), 0.001);
+		Assert.assertEquals(0, cuentaOrigen.obtenerSaldo(), 0.001);
 	}
 
 }
