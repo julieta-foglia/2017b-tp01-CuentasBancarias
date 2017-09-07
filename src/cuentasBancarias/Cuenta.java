@@ -14,7 +14,8 @@ public class Cuenta {
 	}
 
 	public void transferirMontoHacia(double monto, Cuenta cuenta) {
-		
+		this.saldo -= monto;
+		cuenta.saldo += monto;
 	}
 
 }
