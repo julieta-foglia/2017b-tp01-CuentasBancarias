@@ -15,7 +15,7 @@ public class Cuenta {
 
 	public boolean transferirMontoHacia(double monto, Cuenta cuenta) {
 		
-		if(this.saldo - monto < 0)
+		if(this.saldo - monto < 0 || monto < 0)
 			return false;
 		else {
 			this.saldo -= monto;
