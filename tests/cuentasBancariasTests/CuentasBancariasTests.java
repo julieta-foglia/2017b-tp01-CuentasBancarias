@@ -27,5 +27,13 @@ public class CuentasBancariasTests {
 		cuentaOrigen.transferirMontoHacia(5, cuentaDestino);
 		Assert.assertEquals(10, cuentaDestino.obtenerSaldo(), 0.001);
 	}
+	
+	@Test
+	public void queNoSeTransfieraSaldoSiEsInsuficiente() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(10, cuentaDestino);
+		Assert.assertEquals(10, cuentaDestino.obtenerSaldo(), 0.001);
+	}
 
 }
