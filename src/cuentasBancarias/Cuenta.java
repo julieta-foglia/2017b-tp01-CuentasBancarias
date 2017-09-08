@@ -13,9 +13,17 @@ public class Cuenta {
 		return this.saldo;
 	}
 
-	public void transferirMontoHacia(double monto, Cuenta cuenta) {
-		this.saldo -= monto;
-		cuenta.saldo += monto;
+	public boolean transferirMontoHacia(double monto, Cuenta cuenta) {
+		
+		if(this.saldo - monto < 0)
+			return false;
+		else {
+			this.saldo -= monto;
+			cuenta.saldo += monto;
+			return true;
+		}
+		
+		
 	}
 
 }
