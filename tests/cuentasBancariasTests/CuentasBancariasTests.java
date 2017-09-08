@@ -47,7 +47,7 @@ public class CuentasBancariasTests {
 		Cuenta cuentaOrigen = new Cuenta(1, 5);
 		Cuenta cuentaDestino = new Cuenta(2, 5);
 		cuentaOrigen.transferirMontoHacia(4.32, cuentaDestino);
-		Assert.assertEquals(10, cuentaOrigen.obtenerSaldo(), 0.001);
+		Assert.assertEquals(0.679, cuentaOrigen.obtenerSaldo(), 0.001);
 	}
 
 }
