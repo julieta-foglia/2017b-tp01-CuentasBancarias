@@ -5,10 +5,9 @@ import org.junit.Test;
 import cuentasBancarias.Cuenta;
 import org.junit.Assert;
 
-import static org.junit.Assert.*;
-
 public class CuentasBancariasTests {
 
+	@SuppressWarnings("unused")
 	@Test
 	public void test() {
 		Cuenta cuentaOrigen = new Cuenta(1, 0);
@@ -17,7 +16,7 @@ public class CuentasBancariasTests {
 	@Test
 	public void queSeObtengaSaldoDeLaCuenta() {
 		Cuenta cuentaOrigen = new Cuenta(1, 0);
-		Assert.assertEquals(0, cuentaOrigen.obtenerSaldo(), 0.001);
+		Assert.assertEquals(0, cuentaOrigen.obtenerSaldo(), 0.01);
 	}
 	
 	@Test
@@ -25,7 +24,7 @@ public class CuentasBancariasTests {
 		Cuenta cuentaOrigen = new Cuenta(1, 5);
 		Cuenta cuentaDestino = new Cuenta(2, 5);
 		cuentaOrigen.transferirMontoHacia(5, cuentaDestino);
-		Assert.assertEquals(10, cuentaDestino.obtenerSaldo(), 0.001);
+		Assert.assertEquals(10, cuentaDestino.obtenerSaldo(), 0.01);
 	}
 	
 	@Test
@@ -47,7 +46,7 @@ public class CuentasBancariasTests {
 		Cuenta cuentaOrigen = new Cuenta(1, 5);
 		Cuenta cuentaDestino = new Cuenta(2, 5);
 		cuentaOrigen.transferirMontoHacia(4.32, cuentaDestino);
-		Assert.assertEquals(0.679, cuentaOrigen.obtenerSaldo(), 0.001);
+		Assert.assertEquals(0.67, cuentaOrigen.obtenerSaldo(), 0.01);
 	}
 
 }
