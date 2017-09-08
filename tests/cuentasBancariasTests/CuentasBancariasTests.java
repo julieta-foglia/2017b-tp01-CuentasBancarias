@@ -41,5 +41,13 @@ public class CuentasBancariasTests {
 		Cuenta cuentaDestino = new Cuenta(2, 5);
 		Assert.assertFalse(cuentaOrigen.transferirMontoHacia(-10, cuentaDestino));
 	}
+	
+	@Test
+	public void queSeResteSaldoDeCuentaOrigen() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(4.32, cuentaDestino);
+		Assert.assertEquals(10, cuentaOrigen.obtenerSaldo(), 0.001);
+	}
 
 }
