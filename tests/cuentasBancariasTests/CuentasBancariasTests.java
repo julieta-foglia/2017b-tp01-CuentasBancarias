@@ -48,5 +48,14 @@ public class CuentasBancariasTests {
 		cuentaOrigen.transferirMontoHacia(4.32, cuentaDestino);
 		Assert.assertEquals(0.67, cuentaOrigen.obtenerSaldo(), 0.01);
 	}
+	
+	@Test
+	public void queSePuedaRealizarDosTransferenciasSeguidas() {
+		Cuenta cuentaOrigen = new Cuenta(1, 10);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(4, cuentaDestino);
+		cuentaOrigen.transferirMontoHacia(3, cuentaDestino);
+		Assert.assertEquals(10, cuentaOrigen.obtenerSaldo(), 0.01);
+	}
 
 }
