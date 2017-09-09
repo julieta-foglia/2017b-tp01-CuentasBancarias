@@ -57,5 +57,15 @@ public class CuentasBancariasTests {
 		cuentaOrigen.transferirMontoHacia(3, cuentaDestino);
 		Assert.assertEquals(12, cuentaDestino.obtenerSaldo(), 0.01);
 	}
+	
+	@Test
+	public void queSePuedaRealizarTresTransferenciasSeguidas() {
+		Cuenta cuentaOrigen = new Cuenta(1, 10);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(4, cuentaDestino);
+		cuentaOrigen.transferirMontoHacia(3, cuentaDestino);
+		cuentaOrigen.transferirMontoHacia(1, cuentaDestino);
+		Assert.assertEquals(12, cuentaDestino.obtenerSaldo(), 0.01);
+	}
 
 }
