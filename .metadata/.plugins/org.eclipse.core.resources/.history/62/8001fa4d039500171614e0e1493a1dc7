@@ -1,0 +1,77 @@
+package cuentasBancariasTests;
+
+import org.junit.Test;
+
+import cuentasBancarias.Cuenta;
+import org.junit.Assert;
+
+public class CuentasBancariasTests {
+
+	@SuppressWarnings("unused")
+	@Test
+	public void test() {
+		Cuenta cuentaOrigen = new Cuenta(1, 0);
+	}
+	
+	@Test
+	public void queSeObtengaSaldoDeLaCuenta() {
+		Cuenta cuentaOrigen = new Cuenta(1, 0);
+		Assert.assertEquals(0, cuentaOrigen.obtenerSaldo(), 0.01);
+	}
+	
+	@Test
+	public void queSeTransfieraSaldoEntreCuentas() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(5, cuentaDestino);
+		Assert.assertEquals(10, cuentaDestino.obtenerSaldo(), 0.01);
+	}
+	
+	@Test
+	public void queNoSeTransfieraSaldoSiEsInsuficiente() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		Assert.assertFalse(cuentaOrigen.transferirMontoHacia(10, cuentaDestino));
+	}
+	
+	@Test
+	public void queNoSeTransfieraSaldoInvalido() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		Assert.assertFalse(cuentaOrigen.transferirMontoHacia(-10, cuentaDestino));
+	}
+	
+	@Test
+	public void queSeResteSaldoDeCuentaOrigen() {
+		Cuenta cuentaOrigen = new Cuenta(1, 5);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(4.32, cuentaDestino);
+		Assert.assertEquals(0.67, cuentaOrigen.obtenerSaldo(), 0.01);
+	}
+	
+	@Test
+	public void queSePuedaRealizarDosTransferenciasSeguidas() {
+		Cuenta cuentaOrigen = new Cuenta(1, 10);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(4, cuentaDestino);
+		cuentaOrigen.transferirMontoHacia(3, cuentaDestino);
+		Assert.assertEquals(12, cuentaDestino.obtenerSaldo(), 0.01);
+	}
+	
+	@Test
+	public void queSePuedaRealizarTresTransferenciasSeguidas() {
+		Cuenta cuentaOrigen = new Cuenta(1, 10);
+		Cuenta cuentaDestino = new Cuenta(2, 5);
+		cuentaOrigen.transferirMontoHacia(4, cuentaDestino);
+		cuentaOrigen.transferirMontoHacia(3, cuentaDestino);
+		cuentaOrigen.transferirMontoHacia(1, cuentaDestino);
+		Assert.assertEquals(13, cuentaDestino.obtenerSaldo(), 0.01);
+	}
+	
+	public void convertirSaldoDeLaCuentaEnDolares() {
+		Cuenta cuentaOrigen = new Cuenta(1, 1724);
+		
+		Assert.assertEquals(10, cuentaOrigen.obtenarSaldo(), 0.01);
+	}
+
+}

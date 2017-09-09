@@ -1,0 +1,31 @@
+package cuentasBancarias;
+
+public class Cuenta {
+	int nroCuenta;
+	double saldo;
+
+	public Cuenta(int nro, double saldo) {
+		this.nroCuenta = nro;
+		this.saldo = saldo;
+	}
+
+	public double obtenerSaldo() {
+		return this.saldo;
+	}
+
+	public boolean transferirMontoHacia(double monto, Cuenta cuenta) {
+		
+		if(this.saldo - monto < 0 || monto < 0)
+			return false;
+		else {
+			this.saldo -= monto;
+			cuenta.saldo += monto;
+			return true;
+		}
+		
+	public double pasarADolar()
+	{
+		return this.saldo/17,24;
+	}
+
+}

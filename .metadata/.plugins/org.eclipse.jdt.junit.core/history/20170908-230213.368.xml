@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CuentasBancariasTests" project="2017b-tp01-CuentasBancarias" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="cuentasBancariasTests.CuentasBancariasTests" time="0.001">
+    <testcase name="queNoSeTransfieraSaldoInvalido" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="queSeObtengaSaldoDeLaCuenta" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="queSePuedaRealizarDosTransferenciasSeguidas" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="test" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="queSePuedaRealizarTresTransferenciasSeguidas" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="queSeResteSaldoDeCuentaOrigen" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="queNoSeTransfieraSaldoSiEsInsuficiente" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.0"/>
+    <testcase name="queSeTransfieraSaldoEntreCuentas" classname="cuentasBancariasTests.CuentasBancariasTests" time="0.001"/>
+  </testsuite>
+</testrun>
